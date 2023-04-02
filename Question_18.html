@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Flexible box</title>
+        <style>
+            .container{
+                border:2px dashed black;
+                width:800px;
+                height: 800px;
+                display:flex;
+                flex-direction: row-reverse;
+                flex-wrap: wrap;
+                flex-flow: row wrap;
+                background-color: yellow ;
+                justify-content: space-evenly;
+                align-items: center;
+
+            }
+
+            .container > div{
+                border:2px inset red;
+                height:100px;
+                width: 100px;
+                background-color: black;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: larger;
+                animation-name: animate1;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                box-shadow: 0px 0px 5px red;
+            }
+
+            @keyframes animate1 {
+                from{
+                transform: skewY(0deg) rotate(0deg);
+                box-shadow: 0px 0px 5px red;
+                left:0;
+                top:0;
+                }
+                50%{
+                    left:100px;
+                    top:0;
+                }
+                to{
+                transform: skewY(45deg) rotate(180deg);
+                box-shadow: 0px 0px 22px red;
+                }
+    
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+                <div>
+                    1
+                </div>
+                <div>
+                    2
+                </div>
+                <div>
+                    3
+                </div>
+                <div>
+                    4
+                </div>
+                <div>
+                    5
+                </div>
+        </div>
+    </body>
+</html>

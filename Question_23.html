@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Page.23</title>
+        <style>
+            *{
+                box-sizing : border-box;
+            }
+            .card{
+                position : relative;
+                width : 30%;
+                border: 2px solid black;
+                box-shadow : 5px 10px rgb(69, 3, 3);
+                margin: 10px;
+                height: 100%;
+            }
+            .card>img{
+                width : 100%;
+                height : 100%;
+            }
+            .desc{
+                padding: 20px;
+            }
+            h2{
+                text-align: center;
+                color: rgba(9, 40, 215, 0.778);
+            }
+            p{
+                text-align: justify;
+                color: rgb(234, 7, 181);
+            }
+            .date{
+                width: 30%;
+                color: rgb(208, 10, 102);
+                font-size: 15px;
+                background-color: rgba(255, 233, 0 0 459);
+                position: absolute;
+                top: 96%;
+                left: 63%;
+                transform: rotate(-6 deg);
+                text-align: center;
+            }
+            body{
+                display: flex;
+                margin: 0px;
+                padding: 0px;
+                justify-content: center;
+                align-items: flex-start;
+            }
+        </style>
+    </head>
+    <body>
+            <script>
+                images=["5.jpg","10.jpg","4.jpg"];
+                date=["07/03/2023","08/03/2023","10/03/2023"];
+                titles=["Annual function","Event","Fest"];
+                desc=["Holi-----------miss all <3"];
+                for(i=0;i<3;i++)
+                {
+                    card='<div class="card">'+'<img src="images/'+images[i]+' "/>'+'<div class="date">'+date[i]+'</div>'+'<div class="desc">'+'<h2>'+titles[i]+'</h2>'+'<p>'+desc[i]+'</p>'+'</div>'+'</div>'                      
+                     document.write(card);
+                }
+            </script>
+    </body>
+</html>
